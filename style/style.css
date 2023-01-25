@@ -11,6 +11,7 @@
   outline: none;
   border: none;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,7 +60,7 @@ body {
 }
 
 .navbar .navbar-nav a:hover::after {
-  transform: scaleX(0.9);
+  transform: scaleX(0.5);
 }
 
 .navbar .navbar-nav a:hover {
@@ -170,6 +171,61 @@ body {
   margin-top: -4rem;
 }
 
+/* Projects */
+.projects {
+  padding: 4rem 7%;
+}
+
+.projects h1 {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 4px;
+  border-bottom: 0.4rem solid var(--primary);
+  width: fit-content;
+}
+
+.projects .img-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.projects .img-galery {
+  width: 49%;
+  margin-top: 15px;
+}
+.projects .img-galery img {
+  width: 100%;
+}
+
+.projects .img-wrapper .dect::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: -0.8rem;
+  margin-left: 6.9rem;
+  background-color: var(--primary);
+  width: 35%;
+  height: 35%;
+  z-index: -1;
+}
+.projects .img-wrapper .dect2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-top: -13.5rem;
+  margin-left: -1.2rem;
+  border: 0.3rem solid var(--primary);
+  width: 35%;
+  height: 35%;
+  z-index: -1;
+}
+
+.mobile {
+  display: none;
+}
+
 /* Media Queries*/
 
 /* Laptop */
@@ -182,7 +238,7 @@ body {
 /* Tablet */
 @media (max-width: 768px) {
   html {
-    font-size: 62.5%;
+    font-size: 60%;
   }
 
   #hamburger {
@@ -196,7 +252,7 @@ body {
     right: -100%;
     width: 30rem;
     height: 100vh;
-    background-color: #cbcbcb;
+    background-color: var(--bg);
     transition: 0.3s;
   }
 
@@ -205,7 +261,7 @@ body {
   }
 
   .navbar .navbar-nav a {
-    color: var(--bg);
+    color: var(--primary);
     display: block;
     margin: 1.5rem;
     padding: 0.5rem;
@@ -218,25 +274,89 @@ body {
   .navbar .navbar-nav a:hover::after {
     transform: scaleX(0.2);
   }
+
+  .hero .hero-text h1 {
+    font-size: 11rem;
+    font-weight: 600;
+    position: relative;
+  }
+  .hero .hero-text h2 {
+    font-size: 10rem;
+    font-weight: 600;
+    position: relative;
+  }
+
+  /* Projects */
+
+  .projects .img-wrapper .dect::before {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: -0.7rem;
+    margin-left: 14.5rem;
+    background-color: var(--primary);
+    width: 25%;
+    height: 25%;
+    z-index: -1;
+  }
+
+  .projects .img-wrapper .dect2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    margin-top: -13.5rem;
+    margin-left: -1.2rem;
+    border: 0.3rem solid var(--primary);
+    width: 25%;
+    height: 25%;
+    z-index: -1;
+  }
 }
 
 /* Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 55%;
+    font-size: 60%;
+  }
+
+  body {
+    overflow: hidden;
+  }
+  .mobile {
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: var(--bg);
+    position: fixed;
+    display: block;
+  }
+
+  .mobile p {
+    text-align: center;
+    color: var(--primary);
+    font-size: large;
   }
 
   /* Hero */
   .hero {
     display: inline-block;
+    /* display: none; */
     min-width: 100%;
-    margin-top: 15rem;
-    min-height: 50vh;
+    margin-top: 25rem;
+    min-height: 0;
     padding: 0 9%;
   }
 
   .hero .hero-img {
-    display: none;
+    display: inline-block;
+    position: absolute;
+    width: 50%;
+    margin-left: 4.5rem;
+    z-index: -9999;
+    top: 0;
+    margin-top: 5rem;
+    left: 0;
+    right: 0;
   }
 
   .hero .hero-text {
@@ -263,8 +383,30 @@ body {
   }
   .tentang .tentang-txt {
     max-width: 100%;
+    text-align: center;
   }
   .tentang .tentang-txt .txt-desc h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+  .tentang .tentang-txt .txt-desc p {
+    font-size: 1.3rem;
+    max-width: none;
+  }
+  .tentang .tentang-txt .txt-skills {
+    font-size: 1.7rem;
+  }
+
+  /* Projects */
+  .projects .img-galery {
+    width: 100%;
+    margin-top: 15px;
+  }
+  .projects .img-wrapper .dect::before {
+    content: "";
+    display: none;
+  }
+  .projects .img-wrapper .dect2::after {
+    content: "";
+    display: none;
   }
 }
