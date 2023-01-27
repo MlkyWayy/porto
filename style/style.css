@@ -196,7 +196,11 @@ body {
   margin-top: 15px;
 }
 .projects .img-galery img {
-  width: 100%;
+  width: 99%;
+  transition: 0.2s;
+}
+.projects .img-galery img:hover {
+  transform: scale(1.1);
 }
 
 .projects .img-wrapper .dect::before {
