@@ -132,6 +132,13 @@ body {
   color: var(--primary);
 }
 
+.hero .hero-img {
+  transition: 1s;
+}
+.hero .hero-img:hover {
+  transform: scale(1.1);
+}
+
 /* Tentang */
 .tentang {
   display: flex;
@@ -224,6 +231,55 @@ body {
   width: 35%;
   height: 35%;
   z-index: -1;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  padding: 7rem 7%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact .contact-judul {
+  text-align: center;
+}
+
+.contact .contact-judul p {
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+}
+.contact .contact-judul h1 {
+  font-weight: 600;
+  font-size: 3.3rem;
+  padding-top: 2rem;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid var(--primary);
+}
+
+.contact .contact-sosmed {
+  margin-top: 5rem;
+}
+
+.contact .contact-sosmed .icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+  color: var(--font);
+  transition: 0.3s;
+}
+.contact .contact-sosmed .icon:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 5px;
 }
 
 .mobile {
