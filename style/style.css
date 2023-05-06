@@ -282,9 +282,9 @@ footer {
   margin-bottom: 5px;
 }
 
-.mobile {
+/* .mobile {
   display: none;
-}
+} */
 
 /* Media Queries*/
 
@@ -379,16 +379,9 @@ footer {
     font-size: 60%;
   }
 
-  body {
-    overflow: hidden;
-  }
   .mobile {
     width: 100%;
     height: 100%;
-    z-index: 99999;
-    background-color: var(--bg);
-    position: fixed;
-    display: block;
   }
 
   .mobile p {
@@ -398,45 +391,53 @@ footer {
   }
 
   /* Hero */
-  .hero {
-    display: inline-block;
-    /* display: none; */
-    min-width: 100%;
-    margin-top: 25rem;
-    min-height: 0;
-    padding: 0 9%;
-  }
 
+  .hero {
+    overflow: hidden;
+    max-height: 10px;
+  }
   .hero .hero-img {
-    display: inline-block;
-    position: absolute;
-    width: 50%;
-    margin-left: 4.5rem;
-    z-index: -9999;
-    top: 0;
-    margin-top: 5rem;
-    left: 0;
-    right: 0;
+    margin-top: -15rem;
   }
 
   .hero .hero-text {
-    padding: 0;
+    margin-top: -15rem;
+  }
+  .hero .hero-text h1 {
+    font-size: 5.5rem;
+    /* margin-top: -11rem;
+    margin-left: -1rem; */
+  }
+
+  .hero .hero-text h1::before {
+    margin-left: -29rem;
+    margin-top: -1rem;
+    width: 100vh;
+    height: 20vh;
+    background-image: linear-gradient(180deg, hsl(147deg 93% 28%) 0%, hsl(147deg 93% 25%) 20%, hsl(147deg 93% 20%) 38%, hsl(147deg 93% 14%) 60%, hsl(0deg 0% 0%) 100%);
+    border-color: #050505;
+  }
+
+  .hero .hero-text h1::after {
+    display: none;
   }
 
   .hero .hero-text h3 {
-    line-height: 0;
+    /* line-height: 0; */
+    font-size: 1.7rem;
+    /* text-align: start; */
   }
   .hero .hero-text p {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 300;
     text-align: end;
-    margin-top: 1.5rem;
-    color: var(--primary);
+    margin-top: 5rem;
+    /* margin-left: -3rem; */
   }
 
   /* Tentang */
   .tentang {
-    margin: 0;
+    margin-top: -28rem;
   }
   .tentang .tentang-img {
     display: none;
@@ -447,19 +448,25 @@ footer {
   }
   .tentang .tentang-txt .txt-desc h1 {
     font-size: 3.5rem;
+    display: none;
   }
   .tentang .tentang-txt .txt-desc p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
     max-width: none;
+    text-align: start;
   }
   .tentang .tentang-txt .txt-skills {
     font-size: 1.7rem;
+    display: none;
   }
 
   /* Projects */
+  .projects {
+    margin-top: -8rem;
+  }
+
   .projects .img-galery {
     width: 100%;
-    margin-top: 15px;
   }
   .projects .img-wrapper .dect::before {
     content: "";
@@ -468,5 +475,15 @@ footer {
   .projects .img-wrapper .dect2::after {
     content: "";
     display: none;
+  }
+
+  /* Contact */
+  .contact {
+    margin-top: -8rem;
+  }
+
+  .contact .contact-sosmed .icon {
+    width: 30px;
+    height: 30px;
   }
 }
