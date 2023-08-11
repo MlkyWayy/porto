@@ -162,8 +162,28 @@ body {
   max-width: 89%;
 }
 
+.tentang .tentang-txt .resume {
+  margin-top: 20px;
+}
+.tentang .tentang-txt .resume a {
+  background-color: var(--primary);
+  color: var(--font);
+  border: 2px solid var(--primary);
+  padding: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.tentang .tentang-txt .resume a:hover {
+  color: var(--primary);
+  background-color: var(--bg);
+  border: 2px solid var(--primary);
+  padding: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
 .tentang .tentang-txt .txt-skills {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .tentang .tentang-txt .txt-skills h1 {
@@ -178,6 +198,7 @@ body {
   justify-content: space-between;
   margin-top: 20px;
   font-size: x-large;
+  color: var(--font);
 }
 
 .tentang .tentang-img {
@@ -291,10 +312,6 @@ footer {
   margin-bottom: 5px;
 }
 
-/* .mobile {
-  display: none;
-} */
-
 /* Media Queries*/
 
 /* Laptop */
@@ -406,13 +423,6 @@ footer {
     max-height: 10px;
     margin-top: -25vh;
   }
-  /* .hero .hero-img {
-    margin-top: -15rem;
-  }
-
-  .hero .hero-text {
-    margin-top: -15rem;
-  } */
   .hero .hero-text h1 {
     font-size: 5.5rem;
   }
@@ -439,7 +449,7 @@ footer {
 
   /* Tentang */
   .tentang {
-    margin-top: -28rem;
+    margin-top: -40vh;
   }
   .tentang .tentang-img {
     display: none;
@@ -467,7 +477,12 @@ footer {
 
   /* Projects */
   .projects {
-    margin-top: -5rem;
+    margin-top: -5vh;
+  }
+
+  .projects h1 {
+    text-align: center;
+    width: auto;
   }
 
   .projects .img-galery {
