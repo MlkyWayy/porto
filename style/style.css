@@ -404,14 +404,15 @@ footer {
   .hero {
     overflow: hidden;
     max-height: 10px;
+    margin-top: -25vh;
   }
-  .hero .hero-img {
+  /* .hero .hero-img {
     margin-top: -15rem;
   }
 
   .hero .hero-text {
     margin-top: -15rem;
-  }
+  } */
   .hero .hero-text h1 {
     font-size: 5.5rem;
   }
