@@ -168,8 +168,16 @@ body {
 
 .tentang .tentang-txt .txt-skills h1 {
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--primary);
+}
+
+.tentang .tentang-txt .txt-skills ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: x-large;
 }
 
 .tentang .tentang-img {
@@ -263,16 +271,17 @@ body {
   margin-top: 5rem;
 }
 
-.contact .contact-sosmed .icon {
+.contact .contact-sosmed a {
   width: 50px;
   height: 50px;
   margin: 0 20px;
   color: var(--font);
-  transition: 0.3s;
+  font-size: x-large;
 }
-.contact .contact-sosmed .icon:hover {
+.contact .contact-sosmed a i:hover {
   color: var(--primary);
   transform: scale(1.1);
+  transition: 0.3s;
 }
 
 footer {
@@ -405,17 +414,10 @@ footer {
   }
   .hero .hero-text h1 {
     font-size: 5.5rem;
-    /* margin-top: -11rem;
-    margin-left: -1rem; */
   }
 
   .hero .hero-text h1::before {
-    margin-left: -29rem;
-    margin-top: -1rem;
-    width: 100vh;
-    height: 20vh;
-    background-image: linear-gradient(180deg, hsl(147deg 93% 28%) 0%, hsl(147deg 93% 25%) 20%, hsl(147deg 93% 20%) 38%, hsl(147deg 93% 14%) 60%, hsl(0deg 0% 0%) 100%);
-    border-color: #050505;
+    display: none;
   }
 
   .hero .hero-text h1::after {
@@ -432,7 +434,6 @@ footer {
     font-weight: 300;
     text-align: end;
     margin-top: 5rem;
-    /* margin-left: -3rem; */
   }
 
   /* Tentang */
@@ -453,16 +454,19 @@ footer {
   .tentang .tentang-txt .txt-desc p {
     font-size: 1.6rem;
     max-width: none;
-    text-align: start;
   }
   .tentang .tentang-txt .txt-skills {
     font-size: 1.7rem;
-    display: none;
+    text-align: center;
+  }
+
+  .tentang .tentang-txt .txt-skills ul {
+    font-size: small;
   }
 
   /* Projects */
   .projects {
-    margin-top: -8rem;
+    margin-top: -5rem;
   }
 
   .projects .img-galery {
@@ -482,8 +486,7 @@ footer {
     margin-top: -8rem;
   }
 
-  .contact .contact-sosmed .icon {
-    width: 30px;
-    height: 30px;
+  .contact .contact-sosmed a {
+    font-size: small;
   }
 }
